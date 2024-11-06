@@ -11,7 +11,8 @@ title: 読者と著者
 ---
 erDiagram
     authors ||--o{ books: ""
-    readers ||--o{ books: ""
+    readers ||--o| reader_books: "read book"
+    reader_books ||--|{ books: ""
     readers ||--o{ book_tags: "tagged"
     book_tags ||--o{ books: ""
     
