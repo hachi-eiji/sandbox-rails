@@ -11,9 +11,10 @@ title: 読者と著者
 ---
 erDiagram
     authors ||--o{ books: ""
-    readers ||--o| reader_books: "read book"
-    reader_books ||--|{ books: ""
-    readers ||--o{ book_tags: "tagged"
-    book_tags ||--o{ books: ""
-    books ||--|{ category: "categorize"
+    readers ||--o| readers_books: "read book"
+    readers_books ||--|{ books: ""
+    readers ||--o{ books_tags: "tagged"
+    books_tags ||--o{ books: ""
+    books ||--|{ books_categories: "categorize"
+    books_categories }|--||categories: ""
 ```
