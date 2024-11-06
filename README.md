@@ -15,5 +15,5 @@ erDiagram
     reader_books ||--|{ books: ""
     readers ||--o{ book_tags: "tagged"
     book_tags ||--o{ books: ""
-    
+    books ||--|{ category: "categorize"
 ```
