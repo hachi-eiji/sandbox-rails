@@ -24,12 +24,14 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_09_012708) do
 
   create_table "books", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", comment: "本", force: :cascade do |t|
     t.string "title", null: false, comment: "タイトル"
+    t.bigint "author_id", null: false
     t.integer "price", null: false, comment: "金額(税抜き)"
     t.string "isbn", comment: "ISBNコード"
     t.string "book_jan_code1", comment: "書籍JANコード1"
     t.string "book_jan_code2", comment: "書籍JANコード2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_books_on_author_id"
     t.index ["book_jan_code1", "book_jan_code2"], name: "index_books_on_book_jan_code1_and_book_jan_code2", unique: true
     t.index ["isbn"], name: "index_books_on_isbn", unique: true
   end
@@ -81,6 +83,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_09_012708) do
     t.index ["reader_id"], name: "index_readers_books_on_reader_id"
   end
 
+  add_foreign_key "books", "authors", on_delete: :cascade
   add_foreign_key "books_categories", "books", on_delete: :cascade
   add_foreign_key "books_categories", "categories", on_delete: :cascade
   add_foreign_key "books_tags", "readers_books", column: "readers_books_id", on_delete: :cascade
