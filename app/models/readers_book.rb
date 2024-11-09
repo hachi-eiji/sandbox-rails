@@ -1,0 +1,2 @@
+class ReadersBook < ApplicationRecord
+end
