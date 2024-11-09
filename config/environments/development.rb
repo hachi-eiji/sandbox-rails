@@ -25,6 +25,10 @@ Rails.application.configure do
     config.action_controller.perform_caching = false
   end
 
+  # Log to STDOUT with the current request id as a default log tag.
+  $stdout.sync = true
+  config.logger   = ActiveSupport::TaggedLogging.logger(STDOUT)
+
   # Change to :null_store to avoid any caching.
   config.cache_store = :memory_store
 
@@ -41,7 +45,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
 
   # Print deprecation notices to the Rails logger.
-  config.active_support.deprecation = :log
+  config.active_support.deprecation = :stderr
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
