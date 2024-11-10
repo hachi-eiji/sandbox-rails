@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_09_012708) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_10_035916) do
   create_table "authors", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", comment: "著者", force: :cascade do |t|
     t.string "name", null: false, comment: "氏名"
     t.integer "gender", null: false, comment: "性別"
@@ -31,6 +31,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_09_012708) do
     t.string "book_jan_code2", comment: "書籍JANコード2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "published_on", null: false, comment: "発売日"
     t.index ["author_id"], name: "index_books_on_author_id"
     t.index ["book_jan_code1", "book_jan_code2"], name: "index_books_on_book_jan_code1_and_book_jan_code2", unique: true
     t.index ["isbn"], name: "index_books_on_isbn", unique: true
