@@ -9,6 +9,6 @@
 #   end
 
 Faker::Config.locale = :ja
-Dir[Rails.root.join('db', 'seeds', Rails.env, '**', '*.rb')].sort.each do |seed|
+Rails.root.glob("db/seeds/#{Rails.env}/**/*.rb").sort.each do |seed|
   load seed
 end

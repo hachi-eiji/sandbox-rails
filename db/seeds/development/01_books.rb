@@ -3,7 +3,7 @@
 categories = 10.times.map do
   Category.create!(
     name: Faker::Book.genre,
-    start_on: Time.zone.today,
+    start_on: Time.zone.today
   )
 end
 
@@ -25,7 +25,7 @@ end
       published_on: Faker::Date.birthday,
       book_jan_code1: isbn,
       book_jan_code2: "192#{Faker::Code.npi}",
-      categories: categories.sample(rand(2)),
+      categories: categories.sample(rand(2))
     )
   end
 end
