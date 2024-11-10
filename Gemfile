@@ -53,6 +53,8 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "rspec-rails", require: false
+
+  gem "letter_opener_web", '~> 3.0'
 end
 
 group :development do
