@@ -1,0 +1,6 @@
+plugins:
+  - standard-rails:
+      target_rails_version: 8.0
+  - standard-performance
+ignore:
+  - spec/*_helper.rb
