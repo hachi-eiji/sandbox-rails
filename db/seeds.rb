@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Faker::Config.locale = :ja
+Dir[Rails.root.join('db', 'seeds', Rails.env, '**', '*.rb')].sort.each do |seed|
+  load seed
+end
