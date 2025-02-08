@@ -12,3 +12,8 @@ AllCops:
     - 'config/**/*.rb'
     - 'db/**/*.rb'
     - 'spec/*_helper.rb'
+
+Style/SymbolProc:
+  Exclude:
+    - 'db/**/*.rb'
+
