@@ -5,3 +5,10 @@ require:
   - rubocop-rspec_rails
   - rubocop-factory_bot
   - rubocop-performance
+
+AllCops:
+  Exclude:
+    - 'bin/**'
+    - 'config/**/*.rb'
+    - 'db/**/*.rb'
+    - 'spec/*_helper.rb'
