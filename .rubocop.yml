@@ -1,0 +1,32 @@
+require:
+  - rubocop-capybara
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-rspec_rails
+  - rubocop-factory_bot
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  Include:
+    - 'app/**/*.rb'
+    - 'lib/**/*.rb'
+    - 'spec/**/*.rb'
+  Exclude:
+    - 'vendor/**/**'
+    - 'bin/**'
+    - 'config/**/*.rb'
+    - 'db/**/*.rb'
+    - 'spec/*_helper.rb'
+    - 'config.ru'
+    - 'Rakefile'
+
+Style/SymbolProc:
+  Exclude:
+    - 'db/**/*.rb'
+Style/Documentation:
+  Enabled: false
+
+Lint/EmptyBlock:
+  Exclude:
+    - 'spec/factories/**.rb'
