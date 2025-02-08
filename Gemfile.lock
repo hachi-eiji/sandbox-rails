@@ -77,6 +77,8 @@ GEM
     ast (2.4.2)
     base64 (0.2.0)
     bcrypt_pbkdf (1.1.1)
+    bcrypt_pbkdf (1.1.1-arm64-darwin)
+    bcrypt_pbkdf (1.1.1-x86_64-darwin)
     benchmark (0.4.0)
     bigdecimal (3.1.9)
     bindex (0.8.1)
@@ -160,7 +162,6 @@ GEM
       letter_opener (~> 1.9)
       railties (>= 6.1)
       rexml
-    lint_roller (1.1.0)
     logger (1.6.5)
     loofah (2.24.0)
       crass (~> 1.0.2)
@@ -288,26 +289,35 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.2)
-    rubocop (1.70.0)
+    rubocop (1.71.2)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
       parser (>= 3.3.0.2)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 2.9.3, < 3.0)
-      rubocop-ast (>= 1.36.2, < 2.0)
+      rubocop-ast (>= 1.38.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
     rubocop-ast (1.38.0)
       parser (>= 3.3.1.0)
+    rubocop-capybara (2.21.0)
+      rubocop (~> 1.41)
+    rubocop-factory_bot (2.26.1)
+      rubocop (~> 1.61)
     rubocop-performance (1.23.1)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rails (2.26.2)
+    rubocop-rails (2.29.1)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.52.0, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
+    rubocop-rspec (3.4.0)
+      rubocop (~> 1.61)
+    rubocop-rspec_rails (2.30.0)
+      rubocop (~> 1.61)
+      rubocop-rspec (~> 3, >= 3.0.1)
     ruby-progressbar (1.13.0)
     rubyzip (2.4.1)
     securerandom (0.4.1)
@@ -339,21 +349,6 @@ GEM
       net-sftp (>= 2.1.2)
       net-ssh (>= 2.8.0)
       ostruct
-    standard (1.44.0)
-      language_server-protocol (~> 3.17.0.2)
-      lint_roller (~> 1.0)
-      rubocop (~> 1.70.0)
-      standard-custom (~> 1.0.0)
-      standard-performance (~> 1.6)
-    standard-custom (1.0.2)
-      lint_roller (~> 1.0)
-      rubocop (~> 1.50)
-    standard-performance (1.6.0)
-      lint_roller (~> 1.1)
-      rubocop-performance (~> 1.23.0)
-    standard-rails (1.2.0)
-      lint_roller (~> 1.0)
-      rubocop-rails (~> 2.26.0)
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.2)
@@ -412,13 +407,15 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 8.0.0)
   rspec-rails
+  rubocop-capybara
+  rubocop-factory_bot
+  rubocop-performance
+  rubocop-rails
+  rubocop-rspec_rails
   selenium-webdriver
   solid_cable
   solid_cache
   solid_queue
-  standard
-  standard-performance
-  standard-rails
   stimulus-rails
   thruster
   turbo-rails
@@ -426,4 +423,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   2.5.16
+   2.6.2
