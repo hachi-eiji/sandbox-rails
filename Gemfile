@@ -60,11 +60,11 @@ group :development do
 end
 
 group :rubocop do
-  gem "rubocop-capybara"
-  gem "rubocop-rails"
-  gem "rubocop-rspec_rails"
-  gem "rubocop-factory_bot"
-  gem "rubocop-performance"
+  gem "rubocop-rails", require: false
+  gem "rubocop-rspec_rails", require: false
+  gem "rubocop-factory_bot", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-capybara", require: false
 end
 
 group :test do
