@@ -20,3 +20,6 @@ Style/SymbolProc:
   Exclude:
     - 'db/**/*.rb'
 
+Lint/EmptyBlock:
+  Exclude:
+    - 'spec/factories/**.rb'
