@@ -13,6 +13,8 @@ AllCops:
     - 'config/**/*.rb'
     - 'db/**/*.rb'
     - 'spec/*_helper.rb'
+    - 'config.ru'
+    - 'Rakefile'
 
 Style/SymbolProc:
   Exclude:
