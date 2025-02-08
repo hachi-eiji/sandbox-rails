@@ -13,6 +13,7 @@ AllCops:
     - 'lib/**/*.rb'
     - 'spec/**/*.rb'
   Exclude:
+    - 'vendor/**'
     - 'bin/**'
     - 'config/**/*.rb'
     - 'db/**/*.rb'
