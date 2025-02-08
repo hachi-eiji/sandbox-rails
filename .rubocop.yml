@@ -19,6 +19,8 @@ AllCops:
 Style/SymbolProc:
   Exclude:
     - 'db/**/*.rb'
+Style/Documentation:
+  Enabled: false
 
 Lint/EmptyBlock:
   Exclude:
